@@ -30,6 +30,14 @@
             tapping-term-ms = <50>;
             flavor = "tap-preferred";
         };
+
+        j_grave: j_grave {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp J>, <&kp GRAVE>;
+            mods = <(MOD_LALT)>;
+            keep-mods = <(MOD_LALT)>;
+        };
     };
 
     combos {
