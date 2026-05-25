@@ -20,6 +20,16 @@
             tapping-term-ms = <250>;
             flavor = "tap-preferred";
         };
+
+        AltF: AltF {
+            compatible = "zmk,behavior-hold-tap";
+            label = "ALTF";
+            bindings = <&kp>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <50>;
+            flavor = "tap-preferred";
+        };
     };
 
     combos {
@@ -42,10 +52,10 @@
             //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
 
             bindings = <
-&kp TAB    &kp Q           &kp W  &kp E     &kp R  &kp T        &kp Y    &kp U  &kp I      &kp O    &kp P     &kp BSPC
-&kp LCTRL  &kp A           &kp S  &kp D     &kp F  &kp G        &kp H    &kp J  &kp K      &kp L    &kp SEMI  &kp SQT
-&kp LSHFT  &CtrlZ LCTRL Z  &kp X  &kp C     &kp V  &kp B        &kp N    &kp M  &kp COMMA  &kp DOT  &kp FSLH  &kp ESC
-                                  &kp LGUI  &mo 1  &kp SPACE    &kp RET  &mo 2  &kp RALT
+&kp TAB    &kp Q           &kp W  &kp E     &kp R             &kp T        &kp Y    &kp U  &kp I      &kp O    &kp P     &kp BSPC
+&kp LCTRL  &kp A           &kp S  &kp D     &AltF LEFT_ALT F  &kp G        &kp H    &kp J  &kp K      &kp L    &kp SEMI  &kp SQT
+&kp LSHFT  &CtrlZ LCTRL Z  &kp X  &kp C     &kp V             &kp B        &kp N    &kp M  &kp COMMA  &kp DOT  &kp FSLH  &kp ESC
+                                  &kp LGUI  &mo 1             &kp SPACE    &kp RET  &mo 2  &kp RALT
             >;
         };
 
@@ -57,10 +67,10 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&kp TAB     &kp EXCL      &kp AT        &kp HASH      &kp DLLR       &kp PRCNT       &kp CARET  &kp AMPS  &kp KP_MULTIPLY  &kp LPAR   &kp RPAR  &kp BSPC
-&bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3   &bt BT_SEL 4    &kp LEFT   &kp DOWN  &kp UP           &kp RIGHT  &trans    &trans
-&kp LSHFT   &trans        &trans        &trans        &kp RA(GRAVE)  &caps_word      &trans     &trans    &trans           &trans     &trans    &trans
-                                        &kp LGUI      &trans         &kp SPACE       &kp RET    &trans    &kp RALT
+&kp TAB     &kp EXCL      &kp AT        &kp HASH      &kp DLLR      &kp PRCNT       &kp CARET  &kp AMPS  &kp KP_MULTIPLY  &kp LPAR   &kp RPAR  &kp BSPC
+&bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4    &kp LEFT   &kp DOWN  &kp UP           &kp RIGHT  &trans    &trans
+&kp LSHFT   &trans        &trans        &trans        &trans        &caps_word      &trans     &trans    &trans           &trans     &trans    &trans
+                                        &kp LGUI      &trans        &kp SPACE       &kp RET    &trans    &kp RALT
             >;
         };
 
